@@ -1,0 +1,259 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+h1, h2, p {
+    text-align: center;
+}
+
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Language Selection Page */
+.language-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+}
+
+#welcome-text {
+    animation: fadeIn 2s ease-in-out;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Authentication Page */
+.auth-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+}
+
+.auth-page input {
+    margin: 10px 0;
+    padding: 10px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Dashboard Page */
+.dashboard-page {
+    height: 100vh;
+    background-color: #87ceeb; /* Sky blue background */
+    padding: 20px;
+    color: white;
+    position: relative;
+}
+
+#menuToggle {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 10px;
+    font-size: 18px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.menu-column {
+    position: absolute;
+    top: 70px;
+    left: 20px;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 150px;
+    z-index: 100;
+}
+
+.menu-column button {
+    text-align: left;
+    color: white;
+    background: transparent;
+}
+
+.menu-column button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Calendar */
+#calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 5px;
+    margin: 20px auto;
+    max-width: 400px;
+}
+
+#calendar div {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#calendar .present {
+    background-color: #28a745; /* Green */
+    color: white;
+}
+
+#calendar .absent {
+    background-color: #dc3545; /* Red */
+    color: white;
+}
+
+/* Mark Attendance Section */
+#attendanceForm {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    margin: 20px auto;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#usersList .user {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+    width: 100%;
+    color: black; /* Make usernames visible */
+}
+
+#usersList .user button.present {
+    background-color: #28a745; /* Green */
+    color: white;
+}
+
+#usersList .user button.absent {
+    background-color: #dc3545; /* Red */
+    color: white;
+}
+/* Attendance Section Styles */
+#usersList .user {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+    width: 100%;
+    align-items: center;
+}
+
+#usersList .user button.present,
+#usersList .user button.absent {
+    margin: 0 5px; /* Buttons closer to each other */
+    padding: 5px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#usersList .user button.present {
+    background-color: #28a745; /* Green */
+    color: white;
+}
+
+#usersList .user button.absent {
+    background-color: #dc3545; /* Red */
+    color: white;
+}
+
+#attendanceForm button {
+    margin-top: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto; /* Center the Save Attendance button */
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff; /* Blue */
+    color: white;
+    cursor: pointer;
+}
+
+#attendanceForm button:hover {
+    background-color: #0056b3;
+}
+/* Attendance Section Styles */
+#usersList .user {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+    width: 100%;
+    align-items: center;
+}
+
+#usersList .user button.present,
+#usersList .user button.absent {
+    margin: 0 5px; /* Buttons closer to each other */
+    padding: 5px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#usersList .user button.present {
+    background-color: #28a745; /* Green */
+    color: white;
+}
+
+#usersList .user button.absent {
+    background-color: #dc3545; /* Red */
+    color: white;
+}
+
+#usersList .user button.present:disabled,
+#usersList .user button.absent:disabled {
+    background-color: #6c757d; /* Gray */
+}
+
+#attendanceForm button {
+    margin-top: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto; /* Center the Save Attendance button */
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff; /* Blue */
+    color: white;
+    cursor: pointer;
+}
+
+#attendanceForm button:hover {
+    background-color: #0056b3;
+}

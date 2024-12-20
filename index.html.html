@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NAGAR PALIKA PARTAPUR GADHI</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Language Selection Page -->
+    <div class="language-page">
+        <h1 id="welcome-text">Welcome to Nagar Palika Partapur Gadhi</h1>
+        <h2>Select Language</h2>
+        <button onclick="selectLanguage('English')">English</button>
+        <button onclick="selectLanguage('Hindi')">हिंदी</button>
+    </div>
+
+    <!-- Authentication Page -->
+    <div class="auth-page" style="display: none;">
+        <h1>Sign Up</h1>
+        <input type="text" id="name" placeholder="Enter your name">
+        <input type="text" id="mobile" placeholder="Enter your mobile number">
+        <button onclick="saveAuthData()">Submit</button>
+    </div>
+
+    <!-- Dashboard Page -->
+    <div class="dashboard-page" style="display: none;">
+        <h1 id="dashboard-welcome">Welcome to Nagar Palika Partapur Gadhi</h1>
+        <button id="menuToggle" onclick="toggleMenu()">☰ Menu</button>
+        <div id="menuColumn" class="menu-column" style="display: none;">
+            <button onclick="loadHome()">Home</button>
+            <button onclick="loadProfile()">Profile</button>
+            <button onclick="loadAttendance()">Attendance</button>
+            <button id="takeAttendanceButton" onclick="showAttendanceForm()" style="display: none;">Take Attendance</button>
+        </div>
+
+        <div id="homeContent" style="display: block;">
+            
+        </div>
+
+        <div id="profileData" style="display: none;"></div>
+        <div id="attendance" style="display: none;"></div>
+
+        <div id="attendanceForm" style="display: none;">
+            <h2 style="color: purple;">Mark Attendance</h2>
+            <div id="usersList"></div>
+            <button onclick="saveAttendance()">Save Attendance</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+  
